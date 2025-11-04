@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .glass-effect {
+    @apply bg-white/80 dark:bg-gray-800/80 backdrop-blur-md border border-gray-200/50 dark:border-gray-700/50 shadow-lg;
+  }
+
+  .card {
+    @apply rounded-xl p-4 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm
+           border border-gray-200/50 dark:border-gray-700/50
+           shadow-xl shadow-gray-200/50 dark:shadow-gray-900/50
+           hover:shadow-2xl hover:shadow-gray-200/50 dark:hover:shadow-gray-900/50
+           transition-all duration-300;
+  }
+
+  .btn-primary {
+    @apply px-4 py-2 bg-gradient-to-r from-blue-600 to-indigo-600 
+           hover:from-blue-700 hover:to-indigo-700
+           dark:from-blue-500 dark:to-indigo-500 
+           dark:hover:from-blue-600 dark:hover:to-indigo-600
+           text-white rounded-lg shadow-md shadow-blue-500/20
+           hover:shadow-lg hover:shadow-blue-500/30
+           transition-all duration-200 
+           disabled:opacity-50 disabled:cursor-not-allowed
+           disabled:hover:shadow-md;
+  }
+
+  .btn-secondary {
+    @apply px-4 py-2 bg-white dark:bg-gray-700 text-gray-700 dark:text-gray-200
+           hover:bg-gray-50 dark:hover:bg-gray-600
+           rounded-lg shadow-sm border border-gray-200 dark:border-gray-600
+           hover:shadow-md transition-all duration-200;
+  }
+
+  .input-field {
+    @apply w-full p-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 
+           focus:border-transparent outline-none dark:bg-gray-800 dark:border-gray-600;
+  }
+
+  .code-editor {
+    @apply font-mono bg-white dark:bg-gray-800
+           text-gray-900 dark:text-gray-200
+           focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none;
+    white-space: pre;
+  }
+
+  .status-success {
+    @apply text-green-600 dark:text-green-400;
+  }
+
+  .status-error {
+    @apply text-red-600 dark:text-red-400;
+  }
+
+  .status-warning {
+    @apply text-yellow-600 dark:text-yellow-400;
+  }
+
+  .status-info {
+    @apply text-blue-600 dark:text-blue-400;
+  }
+}
+
+/* Animations */
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slide-up {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes pulse-slow {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.3s ease-out;
+}
+
+.animate-slide-up {
+  animation: slide-up 0.4s ease-out;
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 2s infinite;
+}
