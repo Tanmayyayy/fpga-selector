@@ -503,9 +503,8 @@ export const healthCheck = async () => {
 
 // Multi-AI Comparison call (backend)
 export const compareAIs = async ({ code, analysis, recommendations }) => {
-  const backendUrl = process.env.REACT_APP_BACKEND_URL || '';
-  const apiUrl = backendUrl ? `${backendUrl}/api/llm/compare` : '/api/llm/compare';
-  const resp = await fetch(apiUrl, {
+  const backendUrl = process.env.REACT_APP_BACKEND_URL || 'http://localhost:3001';
+  const resp = await fetch(`${backendUrl}/api/llm/compare`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ code, analysis, recommendations })
@@ -519,9 +518,8 @@ export const compareAIs = async ({ code, analysis, recommendations }) => {
 
 // Google Gemini LLM call (backend)
 export const askLLM = async ({ code, analysis, recommendations, userQuestion }) => {
-  const backendUrl = process.env.REACT_APP_BACKEND_URL || '';
-  const apiUrl = backendUrl ? `${backendUrl}/api/llm/analyze` : '/api/llm/analyze';
-  const resp = await fetch(apiUrl, {
+  const backendUrl = process.env.REACT_APP_BACKEND_URL || 'http://localhost:3001';
+  const resp = await fetch(`${backendUrl}/api/llm/analyze`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ code, analysis, recommendations, userQuestion })
