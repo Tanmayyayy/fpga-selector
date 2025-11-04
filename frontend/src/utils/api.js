@@ -503,7 +503,8 @@ export const healthCheck = async () => {
 
 // Multi-AI Comparison call (backend)
 export const compareAIs = async ({ code, analysis, recommendations }) => {
-  const resp = await fetch('http://localhost:3001/api/llm/compare', {
+  const backendUrl = process.env.REACT_APP_BACKEND_URL || 'http://localhost:3001';
+  const resp = await fetch(`${backendUrl}/api/llm/compare`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ code, analysis, recommendations })
@@ -517,7 +518,8 @@ export const compareAIs = async ({ code, analysis, recommendations }) => {
 
 // Google Gemini LLM call (backend)
 export const askLLM = async ({ code, analysis, recommendations, userQuestion }) => {
-  const resp = await fetch('http://localhost:3001/api/llm/analyze', {
+  const backendUrl = process.env.REACT_APP_BACKEND_URL || 'http://localhost:3001';
+  const resp = await fetch(`${backendUrl}/api/llm/analyze`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ code, analysis, recommendations, userQuestion })

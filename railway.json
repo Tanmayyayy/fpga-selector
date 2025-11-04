@@ -1,0 +1,17 @@
+# Railway deployment configuration for backend
+# This file tells Railway how to deploy the backend service
+
+# Build command
+[build]
+command = "cd backend && npm install"
+
+# Start command  
+[start]
+command = "cd backend && npm start"
+
+# Health check
+[healthcheck]
+path = "/api/health"
+interval = 30
+timeout = 10
+

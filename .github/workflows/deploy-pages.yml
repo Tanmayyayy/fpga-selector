@@ -35,6 +35,8 @@ jobs:
         run: npm ci
 
       - name: Build
+        env:
+          REACT_APP_BACKEND_URL: ${{ secrets.REACT_APP_BACKEND_URL || 'https://fpga-selector-backend.onrender.com' }}
         run: npm run build
 
       - name: Upload artifact

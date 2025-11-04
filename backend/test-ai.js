@@ -23,4 +23,3 @@ fetch('http://localhost:3001/api/llm/analyze', {
 })
 .catch(err => console.log('❌ Request Error:', err));
 
-
