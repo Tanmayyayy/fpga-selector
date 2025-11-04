@@ -37,4 +37,7 @@ Thumbs.db
 *.local
 .tools/
 
+# Vercel
+.vercel
+
 
