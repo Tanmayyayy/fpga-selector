@@ -2,6 +2,12 @@
 
 A production-quality tool that assists engineers and students working with Verilog by analyzing their code and recommending the most suitable FPGA boards.
 
+## 🌐 Live Site
+
+**Frontend (GitHub Pages):** https://tanmayyayy.github.io/fpga-selector/
+
+The frontend is live and fully functional! The backend (for AI features) can be deployed separately - see [Backend Deployment Guide](BACKEND_DEPLOYMENT.md).
+
 ## 🚀 Quick Start
 
 ### Prerequisites
