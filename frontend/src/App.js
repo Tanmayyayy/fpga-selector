@@ -233,7 +233,7 @@ function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <p className="text-base font-medium bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-400 dark:to-indigo-400 text-transparent bg-clip-text">
-              Made by Harsh, VIT Chennai
+              VIT Chennai
             </p>
             <p className="mt-1 text-sm text-gray-500 dark:text-gray-400">
               All rights reserved © 2025
