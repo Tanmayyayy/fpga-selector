@@ -1,5 +1,5 @@
 import React from 'react';
-import { CheckCircle, XCircle, BarChart3, Cpu, Zap, Layers } from 'lucide-react';
+import { XCircle, BarChart3, Zap, Layers } from 'lucide-react';
 
 const AnalysisResults = ({ result }) => {
   if (!result) return null;

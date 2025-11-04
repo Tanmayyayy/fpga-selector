@@ -269,8 +269,6 @@ const analyzeVerilog = (code) => {
   );
 
   // Calculate complexity score
-  const totalControl = Object.values(controlCounts).reduce((sum, count) => sum + count, 0);
-  
   // Calculate weighted complexity factors
   const gateComplexity = totalGates * 1;
   const controlComplexity = (
