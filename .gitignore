@@ -35,5 +35,6 @@ Thumbs.db
 
 # Misc
 *.local
+.tools/
 
 
